@@ -153,3 +153,4 @@ cython_debug/
 
 # Models
 Tensorflow/workspace/pre-trained-models/*
+Tensorflow/models/*
