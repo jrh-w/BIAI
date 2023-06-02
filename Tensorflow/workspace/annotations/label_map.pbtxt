@@ -1,0 +1,24 @@
+item { 
+	name:'dzik'
+	id:1
+}
+item { 
+	name:'kasztelan'
+	id:2
+}
+item { 
+	name:'kozel'
+	id:3
+}
+item { 
+	name:'lech-active'
+	id:4
+}
+item { 
+	name:'monster'
+	id:5
+}
+item { 
+	name:'red-bull'
+	id:6
+}
