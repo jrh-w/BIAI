@@ -1,0 +1,26 @@
+<annotation>
+	<folder>monster</folder>
+	<filename>PXL_20230526_112845156.jpg</filename>
+	<path>C:\Users\mateu\Desktop\labeling\foty\monster\PXL_20230526_112845156.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2268</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>monster</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>707</xmin>
+			<ymin>702</ymin>
+			<xmax>1899</xmax>
+			<ymax>3467</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Kozel</folder>
+	<filename>PXL_20230526_113213229.jpg</filename>
+	<path>C:\Users\mateu\Desktop\labeling\foty\Kozel\PXL_20230526_113213229.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2268</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>kozel</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>760</xmin>
+			<ymin>733</ymin>
+			<xmax>1725</xmax>
+			<ymax>3385</ymax>
+		</bndbox>
+	</object>
+</annotation>

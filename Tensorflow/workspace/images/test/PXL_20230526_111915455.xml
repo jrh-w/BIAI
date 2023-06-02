@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Kasztelan</folder>
+	<filename>PXL_20230526_111915455.jpg</filename>
+	<path>C:\Users\mateu\Desktop\labeling\foty\Kasztelan\PXL_20230526_111915455.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2268</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>kasztelan</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>486</xmin>
+			<ymin>937</ymin>
+			<xmax>2038</xmax>
+			<ymax>3285</ymax>
+		</bndbox>
+	</object>
+</annotation>

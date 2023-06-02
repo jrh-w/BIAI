@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Dzik</folder>
+	<filename>PXL_20230526_114138356.jpg</filename>
+	<path>C:\Users\mateu\Desktop\labeling\foty\Dzik\PXL_20230526_114138356.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2268</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dzik</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>566</xmin>
+			<ymin>893</ymin>
+			<xmax>1605</xmax>
+			<ymax>3011</ymax>
+		</bndbox>
+	</object>
+</annotation>

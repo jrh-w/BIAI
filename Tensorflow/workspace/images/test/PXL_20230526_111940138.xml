@@ -1,0 +1,26 @@
+<annotation>
+	<folder>lech-active</folder>
+	<filename>PXL_20230526_111940138.jpg</filename>
+	<path>C:\Users\mateu\Desktop\labeling\foty\lech-active\PXL_20230526_111940138.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2268</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>lech-active</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>581</xmin>
+			<ymin>854</ymin>
+			<xmax>1607</xmax>
+			<ymax>3198</ymax>
+		</bndbox>
+	</object>
+</annotation>
