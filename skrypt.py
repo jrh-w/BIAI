@@ -1,7 +1,6 @@
 # Importy do sprawdzania modelu na podstawie zdjęcia
 import os
 import tensorflow as tf
-import object_detection
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as viz_utils
 from object_detection.builders import model_builder
@@ -9,6 +8,7 @@ from object_detection.utils import config_util
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+from tkinter import *
 
 #os.environ['XLA_PYTHON_CLIENT_PREALLOCATE'] ='false'
 #os.environ['XLA_PYTHON_CLIENT_ALLOCATOR']='platform'
@@ -84,6 +84,21 @@ viz_utils.visualize_boxes_and_labels_on_image_array(
 plt.imshow(cv2.cvtColor(image_np_with_detections, cv2.COLOR_BGR2RGB))
 plt.savefig("mygraph.png")
 """
+
+# Create a GUI app
+app = Tk()
+  
+# Bind the app with Escape keyboard to
+# quit app whenever pressed
+app.bind('<Escape>', lambda e: app.quit())
+
+# Create a label and display it on app
+label_widget = Label(app)
+label_widget.pack()
+
+# Create a button to open the camera in GUI app
+#button1 = Button(app, text="Open Camera", command=open_camera)
+#button1.pack()
 
 # Skrypt do odczytu wideo z ciągłą detekcją
 cap = cv2.VideoCapture(0)
