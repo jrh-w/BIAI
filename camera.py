@@ -24,7 +24,7 @@ detection_model = model_builder.build(model_config=configs['model'], is_training
 
 # Odtwórz najbardziej zaawansowany checkpoint modelu
 ckpt = tf.compat.v2.train.Checkpoint(model=detection_model)
-ckpt.restore(os.path.join(constValues.paths['CHECKPOINT_PATH'], 'ckpt-5')).expect_partial()
+ckpt.restore(os.path.join(constValues.paths['CHECKPOINT_PATH'], 'ckpt-6')).expect_partial()
 
 @tf.function
 def detect_fn(image):
@@ -39,6 +39,8 @@ def open_camera(tree: Treeview, sumText: Label):
   width, height = 800, 600
   vid.set(cv2.CAP_PROP_FRAME_WIDTH, width)
   vid.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+
+  currentFound = []
 
   while vid.isOpened():
     ret, frame = vid.read()
@@ -70,22 +72,15 @@ def open_camera(tree: Treeview, sumText: Label):
                 agnostic_mode=False)
     
 
-    # Print detected elements to the screen (test mode)
     my_classes = detections['detection_classes'][0] + label_id_offset
     my_scores = detections['detection_scores'][0]
 
-    min_score = 0.15
+    min_score = 0.5
 
-    if hasattr(my_classes, "__len__"):
-      print([category_index[value]['name']
-        for index,value in enumerate(my_classes) 
-        if my_scores[index] > min_score
-      ])
-      #TODO: Test if viable case
-    elif my_scores > min_score:
+    if my_scores > min_score and currentFound != [category_index[my_classes]['name']]:
       addItem(tree, category_index[my_classes]['name'])
       sumText.config(text=getTotalPrice(tree))
-      print([category_index[my_classes]['name']])
+      currentFound = [category_index[my_classes]['name']]
 
     cv2.imshow('AI cash register camera', cv2.resize(image_np_with_detections, (800, 600)))
 

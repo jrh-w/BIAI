@@ -5,7 +5,7 @@ LABEL_MAP_FILE = 'label_map.pbtxt'
 
 paths = {
     'ANNOTATION_PATH': os.path.join('Tensorflow', 'workspace','annotations'),
-    'CHECKPOINT_PATH': os.path.join('Tensorflow', 'workspace','models',CUSTOM_MODEL_NAME),
+    'CHECKPOINT_PATH': os.path.join('Tensorflow', 'workspace','models', CUSTOM_MODEL_NAME),
     'IMAGE_PATH': os.path.join('Tensorflow', 'workspace','images'),
  }
 
@@ -15,20 +15,6 @@ files = {
 }
 
 columns = ('product', 'count', 'price')
-
-# prices = {
-#   "produkt 1": 1,
-#   "produkt 2": 2,
-#   "produkt 3": 3,
-#   "produkt 4": 4,
-#   "produkt 5": 5,
-#   "dzik": 3.99,
-#   "kasztelan": 2.99,
-#   "kozel": 4.99,
-#   "lech-active": 3.49,
-#   "monster": 5.99,
-#   "red-bull": 4.49,
-# }
 
 products = {
   "produkt 4": {
