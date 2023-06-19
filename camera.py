@@ -41,6 +41,7 @@ def open_camera(tree: Treeview, sumText: Label):
   vid.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
   currentFound = []
+  t = threading.Timer(2.0, lambda: [currentFound.clear()])
 
   while vid.isOpened():
     ret, frame = vid.read()
@@ -78,9 +79,14 @@ def open_camera(tree: Treeview, sumText: Label):
     min_score = 0.5
 
     if my_scores > min_score and currentFound != [category_index[my_classes]['name']]:
+      if t.is_alive():
+        t.cancel()
       addItem(tree, category_index[my_classes]['name'])
       sumText.config(text=getTotalPrice(tree))
       currentFound = [category_index[my_classes]['name']]
+    elif not t.is_alive() and my_scores < min_score:
+      t = threading.Timer(2.0, lambda: [currentFound.clear()])
+      t.start()
 
     cv2.imshow('AI cash register camera', cv2.resize(image_np_with_detections, (800, 600)))
 
