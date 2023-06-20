@@ -6,8 +6,7 @@ LABEL_MAP_FILE = 'label_map.pbtxt'
 paths = {
     'ANNOTATION_PATH': os.path.join('Tensorflow', 'workspace','annotations'),
     'CHECKPOINT_PATH': os.path.join('Tensorflow', 'workspace','models', CUSTOM_MODEL_NAME),
-    'IMAGE_PATH': os.path.join('Tensorflow', 'workspace','images'),
- }
+}
 
 files = {
     'PIPELINE_CONFIG':os.path.join('Tensorflow', 'workspace','models', CUSTOM_MODEL_NAME, 'pipeline.config'),

@@ -13,7 +13,7 @@ import numpy as np
 import constValues
 from functions import addItem, getTotalPrice
 
-tf.config.experimental.set_visible_devices([], 'GPU')
+#tf.config.experimental.set_visible_devices([], 'GPU')
 
 # Odtworzenie etykiet
 category_index = label_map_util.create_category_index_from_labelmap(constValues.files['LABELMAP'])
@@ -24,7 +24,7 @@ detection_model = model_builder.build(model_config=configs['model'], is_training
 
 # Odtwórz najbardziej zaawansowany checkpoint modelu
 ckpt = tf.compat.v2.train.Checkpoint(model=detection_model)
-ckpt.restore(os.path.join(constValues.paths['CHECKPOINT_PATH'], 'ckpt-6')).expect_partial()
+ckpt.restore(os.path.join(constValues.paths['CHECKPOINT_PATH'], 'ckpt-9')).expect_partial()
 
 @tf.function
 def detect_fn(image):
